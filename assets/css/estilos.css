@@ -417,7 +417,12 @@ footer span a{
         padding: 0px 40px;
     }
     .item_cardapio{
-        grid-template-columns: repeat(2, minmax(50px, 275px));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 210px));
+    }
+    .item_cardapio img{
+        height: 85px;
+        width: auto;
+        margin-left: 15%;
     }
     .item_cardapio .info h4{
         margin-left: 12rem;
@@ -470,5 +475,134 @@ footer span a{
     .content.on .list_menu li a{
         font-size: 2rem; 
     }
+    .content.on .menu_toggle .two{
+        opacity: 0;
+    }
+    .content.on .menu_toggle .one {
+        transform: rotate(45deg) translate(5px, -8px);
+    }
+    .content.on .menu_toggle .three{
+        transform: rotate(-45deg) translate(19px, -07px);
 
+    }
+    .contatos_secao{
+        display: block;
+        text-align: center;
+        font-size: 2rem;
+    }
+  
+    .cardapio .info h4{
+        width: 100px;
+        }
+        .cardapio .info h4 span{
+            width: 50px;
+        }
+
+}
+@media (max-width: 600px) {
+    .post_inicio {
+            width: 60%;
+            text-align: center;   
+        } 
+        .btn{
+            width: 350px;
+        }
+        .btn button{
+            width: 150px;
+            margin-top: 3rem;
+        }
+        
+        .Sobre_nos .main .content_sobre p{
+            width: 400px;
+
+        }  
+        .Sobre_nos .main div img{
+            width: auto;
+            height: 350px;
+            margin-left: 30%;
+        }
+        .contatos_secao {
+            width: 400px;
+        }
+        
+        .cardapio .info .pedir{
+            width: 150px;
+        }
+       
+}
+@media (max-width: 450px){
+    html{
+        font-size: 40%;
+    }
+    .btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 250px;
+    }
+    .btn button{
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+    .Sobre_nos .main .content_sobre p{
+        width: 300px;
+    } .Sobre_nos .main div img {
+        height: 300px;
+        margin-left: 10rem;
+    }
+    .item_cardapio .info h4{
+        margin-left: 18rem;
+    }
+    
+    
+
+}
+@media (max-width: 350px) {
+    .contatos_secao{
+        width: 150px;
+    } 
+    footer{
+        height: auto;
+    } footer h4{
+        margin-top: 1rem;
+    }
+    footer span{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 2rem;       
+        
+    }
+    .contatos_secao div{
+        margin: 1rem;
+    }
+        
+}
+@media (max-width: 300px){
+    .Sobre_nos .main .content_sobre p {
+        width: 200px;
+    }
+    .content_sobre h2,
+    .cardapio h2,
+    .contatos h3,
+    .promocao h2{
+        font-size: 4rem;
+    }
+    .Sobre_nos .main div img {
+        height: 200px;
+        margin-left: 5rem;
+    }
+    .btn {
+        width: 200px;
+    }
+    .first_section h1 {
+        margin-top: 10rem;
+    }
+    .item_cardapio img {
+        height: 75px;
+        width: auto;
+        margin-left: 10px;
+    }
 }
