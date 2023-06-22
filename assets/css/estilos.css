@@ -32,6 +32,8 @@ html{
     align-items: center;
     display: flex;
     flex-direction: column;
+    font-family:'Courier New', Courier, monospace;
+    
 }
 .logo h3,
 .logo p{
@@ -150,6 +152,85 @@ html{
     font-size: 1.5rem;
     width: 600px;
 }
+/* PROMOÇÕES */
+.promocao{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(12, 12, 12, 0.8);
+} 
+.promocao h2{
+    font-size: 5rem;
+    color: #e6e6e6;
+    text-transform: uppercase;
+}
+.item_promo{
+    width: 80%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 800px)); ;
+    justify-content: center;
+    align-items: center; 
+    gap: 0.5px;
+}
+
+.item_promo .texto_promo{
+    background-color: rgba(0,0,0,0.8);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+.item_promo .texto_promo h3{
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+.item_promo .texto_promo h4{
+    color: #e6e6e6;
+    font-size: 1.6rem;
+    margin-bottom: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6rem;    
+}
+.item_promo .texto_promo h4 span{
+    font-size: 1.8rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: gold;
+    margin-left: 0.4rem ;
+    text-decoration: underline;
+}
+.item_promo div{
+    background-color: black;
+    box-shadow: 0px 0px 4px 1px;
+    display: flex;
+}
+.item_promo img{
+    width: auto;
+    height: auto;
+}
+.item_promo .pedirpromo{
+    width: 200px;
+    height: 35px;
+    font-size: 1.6rem;
+    background-color: #ffc506;
+    cursor: pointer;
+    color: black;
+    transition: all 250ms ease-in;
+}
+.item_promo .pedirpromo:hover{
+    color: black;
+    background-color: white;
+}
+
+
 /* cardapio*/
 .cardapio {
     width: 100vw;
@@ -160,17 +241,18 @@ html{
     background-color: rgba(12, 12, 12, 0.8);
 
 }
+
 .cardapio h2{
     font-size: 5rem;
     color: #e6e6e6;
     text-transform: uppercase;
 }
 .item_cardapio {
-    width: 80%;
+    width: 90%;
     margin-top: 2rem;
     margin-bottom: 2rem;
     display:  grid;
-    grid-template-columns: repeat( auto-fit, minmax(125px, 325px));
+    grid-template-columns: repeat( auto-fit, minmax(115px, 315px));
     justify-content: center;
     align-items: center;
     gap: 30px;
@@ -277,13 +359,84 @@ footer{
     background-color: black;
     color: white;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 footer h4{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 footer span{
+    display: flex;
     cursor: pointer;
+    justify-content: space-between;
+}
+footer span a{
+    font-size: 1.3rem;
+    margin-right: 1rem;
     color: white;
+}
+@media (max-width: 1200px) {
+    .main {
+        display: block; 
+    }
+    .post_inicio{
+        
+        width: 87%;
+        height: auto;
+    }
+    .content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 12%;
+        padding-left: 0px;
+    }
+    .content .logo{
+        padding-bottom: 5px;
+    } 
+}
+@media (max-width: 870px){
+    .item_promo{
+        grid-template-columns: repeat(auto-fit, minmax(175px, 450px));  
+    }
+    .item_promo div{
+       flex-direction: column; 
+    }   
+}
+@media (max-width: 768px) 
+{
+    html{
+        font-size: 50%;
+    }
+    .content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 40px;
+    }
+    .item_cardapio{
+        grid-template-columns: repeat(2, minmax(50px, 275px));
+    }
+    .item_cardapio .info h4{
+        margin-left: 12rem;
+    }
+    .content .list_menu{
+        display: none;
+    }
+    .one,
+    .two,
+    .three{
+        width: 80%;
+        height: 2px;
+        background-color: white;
+        margin: 6px auto;
+        transition-duration: 0.5s;
+    }
+    .menu_toggle{
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
 }
