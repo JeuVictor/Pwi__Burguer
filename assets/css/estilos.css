@@ -13,6 +13,7 @@ html{
     font-size: 62.5%;   
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+    background-color: #1f1e1f;
 }
 /* menu */
  .content{
@@ -437,6 +438,37 @@ footer span a{
         width: 30px;
         height: 30px;
         cursor: pointer;
+    }
+    .content.on{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100wv;
+        height: 100vh;
+        background-color: rgba(30,31,30,0.8);
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .content.on .logo{
+        display: none;
+    }
+    .content.on .menu_toggle {
+        position: absolute;
+        right: 40px;
+        top: 20px;
+    }
+    .content.on .list_menu{
+        display: block;
+    }
+    .content.on .list_menu li{
+        display: flex;
+        justify-content: center;
+    }
+    .content.on .list_menu li a{
+        font-size: 2rem; 
     }
 
 }
